@@ -6,12 +6,12 @@ describe("App", () => {
 
     const counter = cy.contains("count is: ");
 
-    counter.click();
+    counter.should("contain", "0");
 
     counter.click();
 
-    const counterValue = cy.contains("2");
+    counter.click();
 
-    counterValue.should("contain", "2");
+    counter.should("contain", "2");
   });
 });
